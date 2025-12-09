@@ -1,7 +1,8 @@
 import HeaderIntro from "@/components/home/HeaderIntro";
 import HomeClient from "@/components/home/HomeClient";
 import JobItem from "@/components/home/JobItem";
-import { jobs } from "@/lib/data";
+import ProjectsList from "@/components/home/ProjectsList";
+import { jobs, projects } from "@/lib/data";
 import Image from "next/image";
 
 export default function Home() {
@@ -31,6 +32,10 @@ export default function Home() {
               ))}
             </div>
           </div>
+        </section>
+
+        <section id="projects" className="min-h-screen py-20 sm:py-32">
+            <ProjectsList projects={projects} />
         </section>
       </main>
     </div>

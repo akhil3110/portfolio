@@ -9,7 +9,7 @@ export default function ProjectsList({ projects }: { projects: any[] }) {
   return (
     <div className="space-y-12 sm:space-y-16">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-        <h2 className="text-3xl sm:text-4xl font-medium">Featured Projects</h2>
+        <h2 className="text-3xl sm:text-4xl font-medium">Projects</h2>
         <div className="text-sm text-muted-foreground font-mono">SHOWCASE</div>
       </div>
 
