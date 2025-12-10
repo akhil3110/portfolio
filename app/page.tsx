@@ -1,8 +1,9 @@
+import ConnectSection from "@/components/home/ConnectSection";
 import HeaderIntro from "@/components/home/HeaderIntro";
 import HomeClient from "@/components/home/HomeClient";
 import JobItem from "@/components/home/JobItem";
 import ProjectsList from "@/components/home/ProjectsList";
-import { jobs, projects } from "@/lib/data";
+import { jobs, projects, socials } from "@/lib/data";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
           <HeaderIntro />
         </header>
 
+        <section id="projects" className="min-h-screen py-20 sm:py-32">
+            <ProjectsList projects={projects} />
+        </section>
 
         <section id="work" className="min-h-screen py-20 sm:py-32">
           <div className="space-y-12 sm:space-y-16">
@@ -34,9 +38,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className="min-h-screen py-20 sm:py-32">
-            <ProjectsList projects={projects} />
+        <section id="connect" className="py-20 sm:py-32">
+              <ConnectSection socials={socials} />
         </section>
+
       </main>
     </div>
   );

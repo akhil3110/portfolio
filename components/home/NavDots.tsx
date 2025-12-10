@@ -12,7 +12,7 @@ export default function NavDots({
   return (
     <nav className="fixed left-8 top-1/2 -translate-y-1/2 z-10 hidden lg:block">
       <div className="flex flex-col gap-4">
-        {["intro", "work", "projects", "connect"].map((section) => (
+        {["intro","projects" ,"work", "connect"].map((section) => (
           <div key={section} className="relative group">
             <div className="absolute left-full ml-3 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
               <div className="bg-foreground text-background px-3 py-1.5 rounded text-sm font-medium whitespace-nowrap">

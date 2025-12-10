@@ -18,11 +18,11 @@ export default function ConnectSection({ socials }: { socials: any[] }) {
 
           <div className="space-y-4">
             <Link
-              href="mailto:sarkar.ab07@gmail.com"
+              href="mailto:akhil1659@gmail.com"
               className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
             >
               <span className="text-base sm:text-lg">
-                sarkar.ab07@gmail.com
+                akhil1659@gmail.com
               </span>
               <svg
                 className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"

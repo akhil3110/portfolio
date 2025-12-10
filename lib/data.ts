@@ -25,39 +25,61 @@ export const jobs = [
 
 export const projects = [
     {
-      name: "MindSketch — Real-time Collaborative Diagramming",
+      name: "Insta-Transcribe — Vertical video transcribing platform",
       description:
-        "A real-time collaborative diagramming tool enabling multiple users to draw simultaneously with low-latency WebSocket sync, intuitive canvas UI, and seamless multi-user state accuracy (99%). Deployed on Azure with CI/CD pipelines.",
+        "A Vertical video transcribing platform where user can upload and get transcription and can also emded transcribed video and can download it without watermark",
       tech: [
         "Next.js",
         "Node.js",
-        "WebSocket",
-        "Redis",
-        "Canvas API",
-        "Turborepo",
+        "AWS S3",
+        "AWS Transcribe",
+        "WASM",
+        "FFMPEG",
+        "Zustand",
+        "Shadcn",
         "Tailwind CSS",
-        "Azure",
+        "prisma",
+        "postgress SQL"
       ],
-      link: "https://youtu.be/amt7cD9BEAA",
+      link: "https://insta-transcribe.akhilparmar.com/",
       year: "2025",
-      slug: "mindsketch-collaborative-diagramming",
     },
     {
-      name: "MindSketch — Real-time Collaborative Diagramming",
-      description:
-        "A real-time collaborative diagramming tool enabling multiple users to draw simultaneously with low-latency WebSocket sync, intuitive canvas UI, and seamless multi-user state accuracy (99%). Deployed on Azure with CI/CD pipelines.",
-      tech: [
+        name: "Learnify",
+        description: "Learnify is a web based platform where educators can create and manage courses with secure authentication, video uploads, and Stripe payments.",
+        tech: [
         "Next.js",
         "Node.js",
-        "WebSocket",
-        "Redis",
-        "Canvas API",
-        "Turborepo",
+        "Shadcn",
         "Tailwind CSS",
-        "Azure",
-      ],
-      link: "https://youtu.be/amt7cD9BEAA",
-      year: "2025",
-      slug: "mindsketch-collaborative-diagramming",
-    },
+        "Zustand",
+        "clerk",
+        "prisma",
+        "postgress SQL"
+        ],
+        link: "https://learnify.akhilparmar.com/"
+    }
 ]
+
+export const socials = [
+    { 
+        name: "GitHub", 
+        handle: "@akhil3110", 
+        url: "https://github.com/akhil3110" 
+    },
+    {
+      name: "LinkedIn",
+      handle: "@akhil-parmar-103817190",
+      url: "https://www.linkedin.com/in/akhil-parmar-103817190/",
+    },
+    {
+      name: "X (Formerly Twitter)",
+      handle: "@kakarottwts",
+      url: "https://x.com/kakarottwts",
+    },
+    {
+      name: "Call / Whatsapp",
+      handle: "@+91 8487822676",
+      url: "https://wa.me/+918487822676",
+    },
+  ];
