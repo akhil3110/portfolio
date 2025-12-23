@@ -14,21 +14,15 @@ export default function JobItem({ job, index }: { job: any; index: number }) {
   return (
     <div
       key={index}
-      className="group grid lg:grid-cols-12 gap-4 sm:gap-8 py-2 border-b border-border/50 hover:border-border transition-colors duration-500"
+      className="group gap-4 sm:gap-8 py-2 border-b border-border/50 hover:border-border transition-colors duration-500"
     >
-      <div className="lg:col-span-3">
-        <div className="text-lg font-medium text-muted-foreground group-hover:text-foreground transition-colors duration-500">
-          {job.duration}
-        </div>
-      </div>
-
       <div className="lg:col-span-8 space-y-3">
         <div>
-          <h3 className="text-lg sm:text-xl font-medium">{job.role}</h3>
+          <h3 className="text-lg sm:text-4xl font-medium">{job.role}</h3>
           <div className="text-muted-foreground font-medium leading-tight">
             {job.company}
           </div>
-          <div className="flex flex-wrap items-center gap-2 mt-2">
+          <div className="flex flex-wrap items-center gap-2 mt-4">
             {job.tech.map((tech: string) => (
               <span
                 key={tech}
@@ -40,9 +34,16 @@ export default function JobItem({ job, index }: { job: any; index: number }) {
           </div>
         </div>
 
-        <div className="mt-2">
-          <div>
-            <Collapsible open={open} onOpenChange={setOpen}>
+        <div className="mt-3">
+          <div className="mt-2">
+            <ul className="text-muted-foreground font-medium text-sm leading-relaxed list-disc list-inside space-y-2 break-words whitespace-normal">
+                  {job.description.map((point: string, idx: number) => (
+                    <li key={idx} className="whitespace-normal">
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+            {/* <Collapsible open={open} onOpenChange={setOpen}>
               <CollapsibleTrigger asChild>
                 <button className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
                   <span>Details</span>
@@ -63,7 +64,7 @@ export default function JobItem({ job, index }: { job: any; index: number }) {
                   ))}
                 </ul>
               </CollapsibleContent>
-            </Collapsible>
+            </Collapsible> */}
           </div>
         </div>
       </div>

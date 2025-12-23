@@ -13,6 +13,7 @@ export const jobs = [
     {
         duration: "May 2022 - Jul 2022",
         role: "Frontend Developer Intern",
+        company: "Rain Quail Technology",
         tech: ["React.js", "TypeScript", "Express.js","Node.js", "MondoDB"],
         description: [
             "Developed a dynamic website for a startup, establishing a high-end used car marketplace for streamlined browsing and exploration of available cars.",
@@ -76,8 +77,8 @@ export const socials = [
     },
     {
       name: "X (Formerly Twitter)",
-      handle: "@kakarottwts",
-      url: "https://x.com/kakarottwts",
+      handle: "@akhil1659",
+      url: "https://x.com/akhil1659",
     },
     {
       name: "Call / Whatsapp",

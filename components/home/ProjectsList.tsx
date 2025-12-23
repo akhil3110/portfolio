@@ -17,7 +17,7 @@ export default function ProjectsList({ projects }: { projects: any[] }) {
         {projects.map((project, index) => (
           <Link
             key={index}
-            href={`/projects/${project.slug}`}
+            href={`/projects`}
             className="group block py-4 mx-auto sm:py-6 border-b border-border rounded-lg hover:border-muted-foreground/30 transition-all duration-700"
           >
             <div className="space-y-4">
@@ -26,9 +26,26 @@ export default function ProjectsList({ projects }: { projects: any[] }) {
                   <h3 className="text-lg sm:text-xl font-medium group-hover:text-muted-foreground transition-colors duration-700">
                     {project.name}
                   </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {project.year}
-                  </p>
+                  <Link
+                      href={project.link}
+                       onClick={(e) => e.stopPropagation()}
+                      className="bg-foreground text-background inline-flex items-center gap-1 px-2 py-0.5 text-sm border border-muted-foreground/30 rounded-md hover:border-muted-foreground/50 transition-colors duration-300 mt-1"
+                    >
+                      Live Project
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </Link>
                 </div>
                 <svg
                   className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-all duration-700 shrink-0 mt-1 transform group-hover:translate-x-0.5"
