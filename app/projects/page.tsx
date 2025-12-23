@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { projects } from "@/lib/data";
 import { useEffect } from "react";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Github } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function ProjectsPage() {
@@ -41,7 +41,7 @@ export default function ProjectsPage() {
             {/* Projects Grid */}
             <div className="space-y-8 sm:space-y-12">
               {projects.map((project) => (
-                <Link key={project.slug} href={`/projects/${project.slug}`}>
+                <div key={project.slug}>
                   <article className="group p-6 my-6 border-b border-border rounded-lg hover:border-muted-foreground/50 hover:shadow-lg transition-all duration-500 cursor-pointer">
                     <div className="space-y-4">
                       <div className="flex items-start justify-between gap-4">
@@ -49,23 +49,38 @@ export default function ProjectsPage() {
                           <h2 className="text-lg sm:text-2xl font-medium group-hover:text-muted-foreground transition-colors duration-300">
                             {project.name}
                           </h2>
-                          <p className="text-sm text-muted-foreground">
-                            {project.year}
-                          </p>
+                          <div className="flex flex-row gap-x-2">
+                            <Link
+                              href={project.link}
+                              target="_blank"
+                              onClick={(e) => e.stopPropagation()}
+                              className="bg-accent/45 backdrop-blur-lg inline-flex items-center gap-2 px-2 py-0.5 text-sm border border-muted-foreground/30 rounded-lg hover:border-muted-foreground/50 transition-colors duration-300"
+                            > 
+                              Live Project
+                              <svg
+                                className="w-4 h-4"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={2}
+                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                />
+                              </svg>
+                            </Link>
+                            <Link
+                              href={project.github}
+                              target="_blank"
+                              className="inline-flex bg-accent/45 backdrop-blur-lg items-center gap-2 px-2 py-0.5 border border-muted-foreground/30 rounded-lg hover:border-muted-foreground/50 transition-colors duration-300"
+                            >
+                              Source Code
+                              <Github className="w-4 h-4" />
+                            </Link>
+                          </div>
                         </div>
-                        <svg
-                          className="w-5 h-5 text-muted-foreground group-hover:text-foreground transition-all duration-300 shrink-0 mt-1 transform group-hover:translate-x-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
                       </div>
 
                       <p className="text-muted-foreground leading-relaxed">
@@ -84,7 +99,7 @@ export default function ProjectsPage() {
                       </div>
                     </div>
                   </article>
-                </Link>
+                </div>
               ))}
             </div>
           </div>

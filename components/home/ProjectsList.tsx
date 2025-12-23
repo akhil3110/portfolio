@@ -28,6 +28,7 @@ export default function ProjectsList({ projects }: { projects: any[] }) {
                   </h3>
                   <Link
                       href={project.link}
+                      target="_blank"
                        onClick={(e) => e.stopPropagation()}
                       className="bg-foreground text-background inline-flex items-center gap-1 px-2 py-0.5 text-sm border border-muted-foreground/30 rounded-md hover:border-muted-foreground/50 transition-colors duration-300 mt-1"
                     >

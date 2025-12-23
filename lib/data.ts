@@ -43,6 +43,7 @@ export const projects = [
         "postgress SQL"
       ],
       link: "https://insta-transcribe.akhilparmar.com/",
+      github: "https://github.com/akhil3110/insta-transcribe",
       year: "2025",
       slug: "insta-transcribe"
     },
@@ -60,7 +61,8 @@ export const projects = [
         "postgress SQL"
         ],
         link: "https://learnify.akhilparmar.com/",
-        slug: "learnify"
+        slug: "learnify",
+        github: "https://github.com/akhil3110/insta-transcribe"
     }
 ]
 
