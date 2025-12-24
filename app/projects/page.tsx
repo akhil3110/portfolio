@@ -83,9 +83,19 @@ export default function ProjectsPage() {
                         </div>
                       </div>
 
-                      <p className="text-muted-foreground leading-relaxed">
+                      {/* <p className="text-muted-foreground leading-relaxed">
                         {project.description}
-                      </p>
+                      </p> */}
+
+                      <div className="mt-2">
+                        <ul className="text-muted-foreground font-medium text-sm leading-relaxed list-disc list-inside space-y-2 wrap-break-word whitespace-normal">
+                          {project.details.map((d,key) => (
+                            <li key={key} className="whitespace-normal">
+                              {d}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
                       <div className="flex flex-wrap gap-2 pt-2">
                         {project.tech.map((tech) => (

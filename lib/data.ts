@@ -35,6 +35,7 @@ export const projects = [
         "AWS S3",
         "AWS Transcribe",
         "WASM",
+        "Zustand",
         "FFMPEG",
         "Zustand",
         "Shadcn",
@@ -45,7 +46,14 @@ export const projects = [
       link: "https://insta-transcribe.akhilparmar.com/",
       github: "https://github.com/akhil3110/insta-transcribe",
       year: "2025",
-      slug: "insta-transcribe"
+      slug: "insta-transcribe",
+      details: [
+        "Developed a Next.js application enabling users to seamlessly upload vertical videos (Instagram Reels or YouTube Shorts) to an AWS S3 bucket, integrating AWS Transcribe for automatic transcription.",
+        "Implemented a robust AWS S3 storage solution to efficiently store both the original videos and their corresponding Transcribe-generated transcription files, facilitating easy retrieval and management.",
+        " Utilized ffmpeg wasm to dynamically add captions derived from the transcription files to the original videos, enhancing accessibility and user engagement.",
+        "Enabled users to edit captions and timestamps directly within the application, providing a user-friendly interface for customization and improving overall user experience.",
+        "Incorporated advanced features allowing users to customize caption text color, offering a personalized touch to the videos and enhancing visual appeal."
+      ]
     },
     {
         name: "Learnify",
@@ -58,11 +66,20 @@ export const projects = [
         "Zustand",
         "clerk",
         "prisma",
-        "postgress SQL"
+        "postgress SQL",
+        "zustand"
         ],
         link: "https://learnify.akhilparmar.com/",
         slug: "learnify",
-        github: "https://github.com/akhil3110/insta-transcribe"
+        github: "https://github.com/akhil3110/insta-transcribe",
+        details: [
+          "Developed Learnify, an innovative web platform using Next.js and a custom frontend component library Shacdcn UI, empowering educators to create and share courses seamlessly.",
+          "Implemented secure user authentication using Clerk, enabling teachers to upload video chapters, attachments (PDFs), and manage their courses with Prisma ORM and Postgres SQL.",
+          "Integrated Stripe payment system, providing users with a smooth purchasing experience, enhancing monetization for course creators.",
+          "Utilized MUX player for an engaging video playback experience, making it effortless for learners to access course content.",
+          "Employed Zustand for efficient state management, ensuring a responsive and dynamic user experience.",
+          "Adopted modern technologies like Tailwind CSS and Zod for enhanced UI/UX and robust data validation, creating an appealing and user-friendly environment for educators and students."
+        ]
     }
 ]
 

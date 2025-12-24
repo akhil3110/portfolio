@@ -36,13 +36,13 @@ export default function JobItem({ job, index }: { job: any; index: number }) {
 
         <div className="mt-3">
           <div className="mt-2">
-            <ul className="text-muted-foreground font-medium text-sm leading-relaxed list-disc list-inside space-y-2 break-words whitespace-normal">
-                  {job.description.map((point: string, idx: number) => (
-                    <li key={idx} className="whitespace-normal">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
+            <ul className="text-muted-foreground font-medium text-sm leading-relaxed list-disc list-inside space-y-2 wrap-break-word whitespace-normal">
+              {job.description.map((point: string, idx: number) => (
+                <li key={idx} className="whitespace-normal">
+                  {point}
+                </li>
+              ))}
+            </ul>
             {/* <Collapsible open={open} onOpenChange={setOpen}>
               <CollapsibleTrigger asChild>
                 <button className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
