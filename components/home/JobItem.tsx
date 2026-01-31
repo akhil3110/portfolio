@@ -43,28 +43,6 @@ export default function JobItem({ job, index }: { job: any; index: number }) {
                 </li>
               ))}
             </ul>
-            {/* <Collapsible open={open} onOpenChange={setOpen}>
-              <CollapsibleTrigger asChild>
-                <button className="group inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-200">
-                  <span>Details</span>
-                  {open ? (
-                    <ChevronsDownUp className="w-4 h-4" />
-                  ) : (
-                    <ChevronsUpDown className="w-4 h-4" />
-                  )}
-                </button>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent className="mt-3">
-                <ul className="text-muted-foreground font-medium text-sm leading-relaxed list-disc list-inside space-y-2 break-words whitespace-normal">
-                  {job.description.map((point: string, idx: number) => (
-                    <li key={idx} className="break-words whitespace-normal">
-                      {point}
-                    </li>
-                  ))}
-                </ul>
-              </CollapsibleContent>
-            </Collapsible> */}
           </div>
         </div>
       </div>

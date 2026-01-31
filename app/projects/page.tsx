@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             {/* Header */}
             <div className="space-y-4">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light">
-                Featured Projects
+                Projects
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl">
                 A curated selection of projects that showcase my expertise in
@@ -42,7 +42,7 @@ export default function ProjectsPage() {
             <div className="space-y-8 sm:space-y-12">
               {projects.map((project) => (
                 <div key={project.slug}>
-                  <article className="group p-6 my-6 border-b border-border rounded-lg hover:border-muted-foreground/50 hover:shadow-lg transition-all duration-500 cursor-pointer">
+                  <article className="group p-6 my-6 border-b border-border rounded-lg hover:border-muted-foreground/50 hover:shadow-lg transition-all duration-500">
                     <div className="space-y-4">
                       <div className="flex items-start justify-between gap-4">
                         <div className="space-y-2 flex-1">
@@ -50,27 +50,29 @@ export default function ProjectsPage() {
                             {project.name}
                           </h2>
                           <div className="flex flex-row gap-x-2">
-                            <Link
-                              href={project.link}
-                              target="_blank"
-                              onClick={(e) => e.stopPropagation()}
-                              className="bg-accent/45 backdrop-blur-lg inline-flex items-center gap-2 px-2 py-0.5 text-sm border border-muted-foreground/30 rounded-lg hover:border-muted-foreground/50 transition-colors duration-300"
-                            > 
-                              Live Project
-                              <svg
-                                className="w-4 h-4"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                  strokeWidth={2}
-                                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                                />
-                              </svg>
-                            </Link>
+                            {project.link && (
+                              <Link
+                                href={project.link}
+                                target="_blank"
+                                onClick={(e) => e.stopPropagation()}
+                                className="bg-accent/45 backdrop-blur-lg inline-flex items-center gap-2 px-2 py-0.5 text-sm border border-muted-foreground/30 rounded-lg hover:border-muted-foreground/50 transition-colors duration-300"
+                              > 
+                                Live Project
+                                <svg
+                                  className="w-4 h-4"
+                                  fill="none"
+                                  stroke="currentColor"
+                                  viewBox="0 0 24 24"
+                                >
+                                  <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                                  />
+                                </svg>
+                              </Link>
+                            )}
                             <Link
                               href={project.github}
                               target="_blank"

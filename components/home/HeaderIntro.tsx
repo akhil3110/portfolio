@@ -142,8 +142,10 @@ export default function HeaderIntro() {
           <div className="flex flex-wrap gap-2">
             {[
               "Full-Stack Development",
-              "Next.js / TypeScript",
-              "Golang / Node.js",
+              "MERN",
+              "Next.js / React.js",
+              "Node.js",
+              "Express.js",
               "PostgreSQL",
               "API Design & Development",
               "Deployment & CI/CD",
